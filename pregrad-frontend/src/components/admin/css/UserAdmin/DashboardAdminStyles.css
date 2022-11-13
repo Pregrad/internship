@@ -1,0 +1,672 @@
+.main_container_dashboardAdmin {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    grid-gap: 30px;
+    padding: 35px;
+  }
+  
+  .page_loading_container_dashboardAdmin {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+  }
+  
+  .left_section_container_dashboardAdmin {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+  }
+  
+  .right_section_container_dashboardAdmin {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+  }
+  
+  .top_details_section_dashboardAdmin {
+    width: 100%;
+    background-color: var(--primary-lightest);
+    border-radius: 10px;
+    border: 1px solid var(--input-border);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left_details_section_dashboardAdmin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 30px;
+  }
+  
+  .right_details_section_dashboardAdmin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+  }
+  
+  .logo_container_dashboardAdmin {
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--para-color);
+    background-color: var(--header-bg);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+  
+  .info_container_dashboardAdmin h2 {
+    color: var(--black-color);
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+  
+  .info_container_dashboardAdmin p {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.15rem;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: var(--info-color-dark);
+  }
+  
+  .edit_icon_dashboardAdmin {
+    color: var(--primary-dark);
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .edit_icon2_dashboardAdmin {
+    display: none;
+  }
+  
+  .btn_primary_profile_dashboardAdmin {
+    min-width: 90px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 9px 14px;
+    border-radius: 0.313rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn_primary_profile_dashboardAdmin:hover {
+    background-color: var(--primary-light);
+  }
+  
+  .top_tc_section_dashboardAdmin {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 20px 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 10px;
+    gap: 10px;
+  }
+  
+  .top_tc_section_dashboardAdmin h2 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--white-color);
+  }
+  
+  .top_tc_section_dashboardAdmin p {
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    text-align: center;
+  }
+  
+  .mid_details_section_dashboardAdmin {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    grid-gap: 20px;
+  }
+  
+  .account_container_dashboardAdmin,
+  .applicants_container_dashboardAdmin {
+    width: 50%;
+    height: fit-content;
+    border-radius: 10px;
+    border: 1px solid var(--input-border);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    background-color: var(--header-bg);
+  }
+  
+  .top_box_account_dashboardAdmin,
+  .top_box_applicants_dashboardAdmin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .top_box_account_dashboardAdmin div,
+  .top_box_applicants_dashboardAdmin div {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+  }
+  
+  .top_box_account_dashboardAdmin h2,
+  .top_box_applicants_dashboardAdmin h2,
+  .bottom_details_upper_section_dashboardAdmin h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--menu-link);
+  }
+  
+  .top_box_account_dashboardAdmin p,
+  .top_box_applicants_dashboardAdmin a {
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 700;
+    white-space: nowrap;
+    display: flex;
+    grid-gap: 7px;
+    gap: 7px;
+    align-items: center;
+    padding: 0 10px;
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  .top_box_account_dashboardAdmin p:hover, .top_box_applicants_dashboardAdmin a:hover {
+    color: var(--primary-dark);
+  }
+  
+  .bottom_box_account_dashboardAdmin p,
+  .bottom_box_applicants_dashboardAdmin p {
+    font-size: 0.93rem;
+    color: var(--para-color);
+    font-weight: 500;
+    line-height: 1.45rem;
+  }
+  
+  .settings_icon_dashboardAdmin,
+  .people_icon_dashboardAdmin,
+  .admin_icon_dashboardAdmin {
+    font-size: 22px;
+    color: var(--info-color-dark);
+  }
+
+  .bottom_details_section_dashboardAdmin {
+    width: 100%;
+  }
+
+  .admin_container_dashboardAdmin {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    border: 1px solid var(--input-border);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    background-color: var(--header-bg);
+  }
+
+  .bottom_details_upper_section_dashboardAdmin {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+  }
+
+  .bottom_details_lower_section_dashboardAdmin {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+  }
+
+  .admin_box_dashboardAdmin {
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    border: 1px solid var(--input-border);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* grid-gap: 10px; */
+    background-color: var(--background-secondary);
+  }
+
+  .admin_box_dashboardAdmin h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black-color);
+  }
+
+  .admin_box_dashboardAdmin h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--para-color);
+  }
+
+  .admin_box_upper_section_dashboardAdmin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .delete_admin_box_dashboardAdmin {
+    width: 34px;
+    height: 34px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s all ease-in-out;
+    margin-right: 20px;
+    background-color: var(--primary-lightest);
+    color: var(--para-color);
+    transition: 0.2s all ease;
+    box-shadow: 0 0 8px 2px rgb(0 0 0 / 5%);
+  }
+
+  .delete_admin_box_dashboardAdmin:hover {
+    background-color: var(--primary-light);
+  color: var(--header-bg);
+  box-shadow: 0 0 12px 4px rgb(0 0 0 / 10%);
+  }
+
+  .delete_admin_icon_dashboardAdmin {
+    font-size: 22px;
+  cursor: pointer;
+  }
+
+
+
+  
+
+
+  .modal_backgound_dashboardAdmin {
+      width: 100vw;
+      height: 100vh;
+      background: rgba(30, 39, 46, 0.95);
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      z-index: 900;
+      display: flex;
+      justify-content: center;
+      padding-top: 80px;
+      padding-bottom: 40px;
+      /* overflow: auto; */
+    }
+    
+    .modal_container_dashboardAdmin {
+        /* height: 100%; */
+      background-color: var(--white-color);
+      padding: 32px;
+      border: 1px solid var(--input-border);
+      width: 727px;
+      min-width: 250px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      grid-gap: 25px;
+      overflow-y: scroll;
+    }
+    
+    .modal_top_section_dashboardAdmin h2 {
+      color: var(--black-color);
+    }
+    
+    .modal_mid_section_dashboardAdmin form {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 25px;
+    }
+    
+    .form_box_dashboardAdmin {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 7px;
+    }
+    
+    .form_box_dashboardAdmin label {
+      font-weight: 700;
+      color: var(--para-color);
+      font-size: 1rem;
+      margin-left: 2px;
+    }
+    
+    .form_box_dashboardAdmin input, .form_box_dashboardAdmin textarea {
+      outline: none;
+      padding: 12px 10px;
+      width: 100%;
+      border: 1px solid var(--input-border);
+      color: var(--input-color);
+      border-radius: 5px;
+      font-size: 1rem;
+      margin: 3px 0;
+      transition: 0.1s;
+      background-color: var(--header-bg);
+    }
+    
+    .form_box_dashboardAdmin input:hover, .form_box_dashboardAdmin textarea:hover {
+      border: 1px solid var(--input-hover);
+    }
+    
+    .form_box_dashboardAdmin input:focus, .form_box_dashboardAdmin textarea:focus {
+      border-color: var(--input-focus);
+    }
+  
+    .form_box_dashboardAdmin input:read-only {
+      background-color: var(--primary-lightest);
+    }
+    
+    .errors_msg_dashboardAdmin {
+      color: var(--warning-color);
+      font-size: 16px;
+    }
+    
+    .modal_bottom_section_dashboardAdmin {
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .btn_light_dashboardAdmin {
+      min-width: 90px;
+      background-color: transparent;
+      color: var(--primary-color);
+      padding: 9px 14px;
+      border-radius: 0.375rem;
+      font-size: 1rem;
+      font-weight: 500;
+      border: 1px solid var(--primary-color);
+      cursor: pointer;
+    }
+    
+    .btn_light_dashboardAdmin:hover {
+      background-color: var(--primary-lightest);
+    }
+    
+    .btn_primary_dashboardAdmin {
+      min-width: 90px;
+      background-color: var(--primary-color);
+      color: var(--white-color);
+      padding: 9px 14px;
+      border-radius: 0.313rem;
+      font-size: 1rem;
+      font-weight: 400;
+      border: none;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+    
+    .btn_primary_dashboardAdmin:hover {
+      background-color: var(--primary-light);
+    }
+  
+    .select_dashboardAdmin{
+      outline: none;
+    padding: 12px 10px;
+    width: 100%;
+    border: 1px solid var(--input-border);
+    color: var(--input-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 3px 0;
+    transition: 0.1s;
+    background-color: var(--header-bg);
+  }
+  
+  .select_dashboardAdmin:hover {
+      border: 1px solid var(--input-hover);
+  }
+  
+  .select_dashboardAdmin:focus {
+      border-color: var(--input-focus);
+  }
+  
+  
+  
+  @media screen and (max-width: 1140px) {
+    .main_container_dashboardAdmin {
+      padding: 25px;
+      grid-gap: 20px;
+    }
+  
+    .left_section_container_dashboardAdmin,
+    .right_section_container_dashboardAdmin {
+      grid-gap: 25px;
+    }
+  
+    .top_details_section_dashboardAdmin {
+      padding: 20px;
+    }
+  
+    .top_box_account_dashboardAdmin h2,
+    .top_box_applicants_dashboardAdmin h2,
+    .bottom_details_upper_section_dashboardAdmin h2 {
+      font-size: 1rem;
+    }
+
+    .admin_box_dashboardAdmin h3 {
+      font-size: 15px;
+    }
+  
+    .admin_box_dashboardAdmin h5 {
+      font-size: 13px;
+    }
+
+    .left_details_section_dashboardAdmin {
+      grid-gap: 15px;
+    }
+  
+    .right_details_section_dashboardAdmin {
+      grid-gap: 10px;
+    }
+  
+    .top_tc_section_dashboardAdmin {
+      padding: 20px 15px;
+    }
+  
+    .mid_details_section_dashboardAdmin {
+      grid-gap: 15px;
+    }
+  
+    .account_container_dashboardAdmin,
+    .applicants_container_dashboardAdmin,
+    .admin_container_dashboardAdmin {
+      padding: 15px;
+    }
+  
+    .logo_container_dashboardAdmin {
+      width: 65px;
+      height: 65px;
+    }
+  
+    .btn_light_dashboardAdmin, .btn_primary_dashboardAdmin {
+      padding: 8px 11px;
+    }
+  }
+  
+  @media screen and (max-width: 830px) {
+      .modal_backgound_dashboardAdmin {
+        padding: 80px 20px 40px 20px;
+      }
+    }
+  
+  @media screen and (max-width: 790px) {
+    .main_container_dashboardAdmin {
+      flex-direction: column;
+    }
+  
+    .left_section_container_dashboardAdmin,
+    .right_section_container_dashboardAdmin {
+      width: 100%;
+    }
+  
+    .logo_container_dashboardAdmin {
+      width: 60px;
+      height: 60px;
+    }
+
+    .delete_admin_box_dashboardAdmin {
+      margin-right: 0px;
+    }
+  }
+  
+  @media screen and (max-width: 580px) {
+    .main_container_dashboardAdmin {
+      padding: 20px 0;
+    }
+  
+    .top_details_section_dashboardAdmin {
+      border-radius: 0;
+      padding: 15px 10px;
+    }
+  
+    .logo_container_dashboardAdmin {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .info_container_dashboardAdmin h2 {
+      font-size: 1rem;
+      line-height: 1.3rem;
+    }
+  
+    .btn_primary_profile_dashboardAdmin {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    }
+  
+    .edit_icon_dashboardAdmin {
+      font-size: 20px;
+    }
+  
+    .mid_details_section_dashboardAdmin {
+      flex-direction: column;
+      padding: 0 15px;
+    }
+
+    .bottom_details_section_dashboardAdmin {
+      padding: 0 15px;
+    }
+  
+    .account_container_dashboardAdmin,
+    .applicants_container_dashboardAdmin {
+      width: 100%;
+    }
+  
+    .bottom_box_account_dashboardAdmin p,
+    .bottom_box_applicants_dashboardAdmin p {
+      font-size: 0.875rem;
+      line-height: 1.2rem;
+    }
+  
+    .left_section_container_dashboardAdmin {
+      grid-gap: 20px;
+    }
+  
+    .right_section_container_dashboardAdmin {
+      padding: 0 15px;
+      grid-gap: 20px;
+    }
+  
+    .modal_container_dashboardAdmin {
+      padding: 16px;
+    }
+  
+    .btn_light_dashboardAdmin, .btn_primary_dashboardAdmin {
+          font-size: 0.9rem;
+          padding: 5px 5px;
+    }
+    
+    .page_loading_container_dashboardAdmin img {
+      width: 100px;
+    }
+  }
+  
+  @media screen and (max-width: 440px) {
+    .top_details_section_dashboardAdmin {
+      flex-direction: column;
+      grid-gap: 15px;
+    }
+  
+    .left_details_section_dashboardAdmin {
+      width: 100%;
+      padding: 0 20px;
+      justify-content: space-between;
+    }
+  
+    .info_container_dashboardAdmin h2,
+    .info_container_dashboardAdmin p {
+      text-align: center;
+    }
+  
+    .edit_icon_dashboardAdmin {
+      display: none;
+    }
+  
+    .edit_icon2_dashboardAdmin {
+      display: flex;
+      color: var(--primary-dark);
+      font-size: 20px;
+      cursor: pointer;
+    }
+  
+    .right_details_section_dashboardAdmin {
+      width: 100%;
+      padding: 0 20px;
+    }
+  
+    .btn_primary_profile_dashboardAdmin {
+      width: 100%;
+    }
+  
+    .errors_msg_dashboardAdmin {
+      font-size: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 360px) {
+    .left_details_section_dashboardAdmin {
+      padding: 0;
+    }
+  
+    .logo_container_dashboardAdmin {
+      width: 42px;
+      height: 42px;
+    }
+  
+    .mid_details_section_dashboardAdmin, .bottom_details_section_dashboardAdmin {
+      padding: 0 10px;
+    }
+  
+    .right_section_container_dashboardAdmin {
+      padding: 0 10px;
+    }
+  }
+  

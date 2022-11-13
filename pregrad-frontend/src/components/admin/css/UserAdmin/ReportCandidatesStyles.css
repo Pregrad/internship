@@ -1,0 +1,232 @@
+.sub_header_reportcandidates  {
+    width: 100%;
+    background-color: var(--header-bg);
+    padding: 5px 40px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--background-secondary-hover);
+    position: sticky;
+    top: 70px;
+    z-index: 110;
+    /* box-shadow: 0 0 2px 2px rgb(0 0 0 / 5%); */
+  }
+  
+  .sub_header_reportcandidates  h5 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 0;
+  }
+  
+  .sub_header_reportcandidates  span {
+    font-size: 17px;
+  }
+  
+  .main_container_reportcandidates  {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 30px;
+    padding: 30px 30px 30px 30px;
+    position: relative;
+  }
+  
+  .add_section1_reportcandidates  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+    padding-top: 90px;
+  }
+  
+  .add_section1_logo_reportcandidates  {
+    display: inline-block;
+    background-color: var(--input-border);
+    padding: 14px 20px;
+    border-radius: 50px;
+  }
+  
+  .add_section1_icon_reportcandidates  {
+    color: var(--black-color);
+  }
+  
+  .add_section1_details_reportcandidates  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 5px;
+  }
+  
+  .add_section1_details_reportcandidates  h2 {
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--black-color);
+  }
+  
+  .add_section1_details_reportcandidates  p {
+    color: var(--para-color);
+    text-align: center;
+  }
+  
+  .main_box_reportcandidates  {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+  }
+  
+  .student_box_reportcandidates  {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--header-bg);
+    width: 100%;
+    grid-gap: 5px;
+    box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%);
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .accept_reportcandidates  {
+    background-color: var(--accept-color);
+  }
+  
+  .reject_reportcandidates  {
+    background-color: var(--reject-color);
+  }
+  
+  .top_section_student_reportcandidates  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .top_section_student_reportcandidates  h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black-color);
+  }
+  
+  .search_icon_container_reportcandidates  {
+    width: 34px;
+    height: 34px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s all ease-in-out;
+    margin-right: 20px;
+    background-color: var(--primary-lightest);
+    color: var(--para-color);
+    transition: 0.2s all ease;
+    box-shadow: 0 0 8px 2px rgb(0 0 0 / 5%);
+  }
+  
+  .search_icon_container_reportcandidates :hover {
+    background-color: var(--primary-light);
+    color: var(--header-bg);
+    box-shadow: 0 0 12px 4px rgb(0 0 0 / 10%);
+  }
+  
+  .search_icon_reportcandidates  {
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .mid_section_reportcandidates {
+    width: 85%;
+  }
+  
+  .mid_section_reportcandidates span {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--menu-link);
+  }
+
+  .mid_section_reportcandidates p {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--info-color-light);
+  }
+
+  .delete_box_reportcandidates  {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    box-shadow: 0 0 8px 2px rgb(0 0 0 / 6%);
+    border-radius: 10px;
+    display: flex;
+    padding: 10px 12px;
+    cursor: pointer;
+    grid-gap: 10px;
+    width: 180px;
+    color: var(--para-color);
+    border: var(--input-border);
+    background-color: var(--input-border);
+    transition: 0.2s all ease;
+  }
+  
+  .delete_box_reportcandidates :hover {
+    color: var(--menu-link);
+    box-shadow: 0 0 11px 4px rgb(0 0 0 / 6%);
+    border: 1px solid var(--input-hover);
+  }
+  
+  .delete_icon_reportcandidates  {
+    font-size: 26px;
+  }
+  
+  .delete_box_reportcandidates  p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .line_reportcandidates  {
+    width: 5px;
+      height: 100%;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .sub_header_reportcandidates  {
+      top: 66.19px;
+    }
+  }
+  
+  @media screen and (max-width: 660px) {
+    .main_container_reportcandidates  {
+      padding: 25px 20px 30px 20px;
+    }
+  
+    .search_icon_container_reportcandidates  {
+      margin-right: 0;
+    }
+  }
+  
+  @media screen and (max-width: 560px) {
+    .main_container_reportcandidates  {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .student_box_reportcandidates  {
+      padding: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .sub_header_reportcandidates  {
+      top: 59.33px;
+      padding: 3px 30px;
+      height: 44px;
+    }
+  
+    .delete_box_reportcandidates  {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+    }
+  }

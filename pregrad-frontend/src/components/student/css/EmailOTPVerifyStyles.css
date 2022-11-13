@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap");
+
+.main_emailOtp {
+  display: flex;
+}
+
+.left-part_emailOtp {
+  width: 45%;
+  /* height: 100vw; */
+  min-height: 92vh;
+  background-color: var(--background-secondary);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.right-part_emailOtp {
+  width: 55%;
+  height: 100%;
+  min-height: 92vh;
+  padding: 40px 60px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.left-part_emailOtp .top_emailOtp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.left-part_emailOtp .top_emailOtp h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.52rem;
+  font-weight: 900;
+  color: var(--black-color);
+}
+
+.left-part_emailOtp .top_emailOtp p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1.043rem;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  color: var(--para-color);
+}
+
+.signup-banner_emailOtp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 30px 0;
+}
+
+.signup-banner_emailOtp img {
+  width: 80%;
+}
+
+.social_emailOtp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-logo_emailOtp {
+  width: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.social-logo_emailOtp:nth-child(3) {
+  width: 30px;
+}
+
+.social-logo_emailOtp img {
+  width: 100%;
+  height: 100%;
+}
+
+.form-container_emailOtp {
+  width: 100%;
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  padding: 35px 45px;
+}
+
+.right-part_emailOtp .top_emailOtp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-part_emailOtp .top_emailOtp h2 {
+  font-size: 1.35rem;
+  color: var(--black-color);
+}
+
+.right-part_emailOtp .top_emailOtp a {
+  font-weight: 700;
+  font-size: 0.905rem;
+  text-decoration: underline;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.right-part_emailOtp .top_emailOtp a:hover {
+  color: var(--primary-dark);
+}
+
+.line_emailOtp {
+  width: 100%;
+  height: 1px;
+  background-color: var(--input-border);
+  margin: 15px 5px;
+}
+
+.main-error-msg_emailOtp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.main-error-msg_emailOtp p {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--warning-color);
+}
+
+.mid-part_emailOtp {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-container-box_emailOtp {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container-box_emailOtp:nth-child(2) {
+  margin-top: 25px;
+}
+
+.form-container-box_emailOtp:nth-child(3){
+  margin-top: 25px;
+}
+
+.box2_password_emailOtp {
+  position: relative;
+}
+
+.hide_password_emailOtp {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+  right: 10px;
+  top: 38px;
+  font-size: 20px;
+  color: var(--para-color);
+}
+
+.form-container-box_emailOtp label {
+  font-weight: 700;
+  color: var(--para-color);
+  font-size: 1rem;
+  margin-left: 2px;
+}
+
+.form-container-box_emailOtp input {
+  outline: none;
+  padding: 12px 10px;
+  width: 100%;
+  border: 1px solid var(--input-border);
+  color: var(--input-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 3px 0;
+  transition: 0.1s;
+  background-color: var(--header-bg);
+}
+
+.form-container-box_emailOtp input:hover {
+  border: 1px solid var(--input-hover);
+}
+
+.form-container-box_emailOtp input:focus {
+  border-color: var(--input-focus);
+}
+
+.errors-msg_emailOtp {
+  font-size: 16px;
+  color: var(--warning-color);
+}
+
+.otp-field_emailOtp {
+    display: flex;
+}
+
+.otp-field_emailOtp input {
+    width: 58px;
+    font-size: 32px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 2px;
+    margin-right: 15px;
+    border: 2px solid var(--input-border);
+    font-weight: 600;
+    color: var(--input-color);
+    outline: none;
+    transition: all 0.1s;
+}
+
+.otp-field_emailOtp input:focus {
+    border: 2px solid var(--create-btn-hover);
+    box-shadow: 0 0 2px 2px var(--primary-dark);
+}
+
+.create-button_emailOtp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 6px 20px 6px 16px;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: var(--create-btn);
+  color: var(--white-color);
+  cursor: pointer;
+  font-style: normal;
+  transition: 0.1s;
+  white-space: nowrap;
+  margin-top: 30px;
+}
+
+.create-button_emailOtp:hover {
+  background-color: var(--create-btn-hover);
+}
+
+.create-btn-logo_emailOtp {
+  color: var(--white-color);
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner_emailOtp {
+  width: 22px;
+  height: 22px;
+  border: 4px solid var(--background-secondary); 
+  border-top: 4px solid var(--para-color); 
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+  margin: 5px 10px 5px 0;
+}
+
+.bottom-part_emailOtp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.bottom-part_emailOtp p{
+  font-size: 16px;
+}
+
+.bottom-part_emailOtp a{
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black-color);
+}
+
+@media screen and (max-width: 960px) {
+  .left-part_emailOtp {
+    display: none;
+  }
+
+  .right-part_emailOtp {
+    width: 100%;
+  }
+
+  .form-main-box_emailOtp {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container6_emailOtp{
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .right-part_emailOtp {
+    padding: 30px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-container_emailOtp {
+    padding: 10px;
+    border: none;
+  }
+
+  .right-part_emailOtp .top_emailOtp h2 {
+    font-size: 1.2rem;
+  }
+
+  .right-part_emailOtp .top_emailOtp a {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .right-part_emailOtp .top_emailOtp {
+    flex-direction: column;
+    align-items: flex-start;
+    grid-gap: 5px;
+  }
+}
