@@ -1,0 +1,481 @@
+.main_container_companyresume {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 30px;
+    padding: 35px;  
+  }
+
+  .page_loading_container_companyresume {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+  }
+
+  .welcome_container_companyresume {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 0.938rem 1.563rem;
+    background-color: var(--header-bg);
+    width: 100%;
+    box-shadow: 0rem 0.3125rem 0.3125rem 0rem rgb(82 63 105 / 5%);
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .welcome_left_section_companyresume h4 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .welcome_left_section_companyresume p {
+    font-size: 14px;
+    color: var(--info-color-dark);
+  }
+  
+  .welcome_right_section_companyresume h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #828690;
+  }
+  
+  .welcome_right_section_companyresume span {
+    color: var(--primary-color);
+  }
+  
+  .profile_container_companyresume {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 0.938rem;
+    background-color: var(--header-bg);
+    width: 100%;
+    box-shadow: 0rem 0.3125rem 0.3125rem 0rem rgb(82 63 105 / 5%);
+  }
+  
+  .profile_background_companyresume {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .profile_background_companyresume img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 15.625rem;
+    border-radius: 5px;
+  }
+  
+  .profile_user_details_companyresume {
+    padding: 1.25rem 1rem;
+    display: flex;
+    grid-gap: 1rem;
+  }
+  
+  .user_image_companyresume {
+    max-width: 6.25rem;
+    width: 6rem;
+    height: 5.4rem;
+    border-radius: 50%;
+    border: 2px solid var(--header-bg);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--para-color);
+    position: relative;
+    z-index: 1;
+    margin-top: -5rem;
+    margin-right: 0.625rem;
+    background-color: var(--background-secondary-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile_info_companyresume {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+  }
+  
+  .info_container_companyresume {
+    display: flex;
+    grid-gap: 20px;
+  }
+  
+  .info_left_section_companyresume,
+  .info_middle_section_companyresume {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+  }
+  
+  .info_left_section_companyresume h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .info_left_section_companyresume p {
+    color: #828690;
+    font-size: 15px;
+  }
+  
+  .info_middle_section_companyresume h5 {
+    font-size: 1.07rem;
+    font-weight: 600;
+    color: var(--para-color);
+  }
+  
+  .profile_edit_container_companyresume {
+    display: flex;
+    grid-gap: 10px;
+  }
+  
+  .profile_edit_companyresume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    background-color: var(--primary-lightest);
+    color: var(--primary-dark);
+    cursor: pointer;
+  }
+  
+  .profile_edit_companyresume:hover {
+    background-color: var(--input-hover);
+  }
+  
+  .profile_edit2_companyresume {
+    display: none;
+  }
+  
+  .profile_edit_companyresume a, .profile_edit2_companyresume a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-top: 5px;
+  }
+
+  .main_details_container_companyresume {
+    width: 100%;
+    display: flex;
+  }
+
+  .main_details_left_section_companyresume {
+    width: 40%;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+  }
+  
+  .main_details_right_section_companyresume {
+    width: 60%;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+  }
+
+  .card_companyresume {
+    width: 100%;
+    background-color: var(--header-bg);
+    box-shadow: 0rem 0.3125rem 0.3125rem 0rem rgb(82 63 105 / 5%);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    grid-gap: 15px;
+    border: 1px solid var(--input-border);
+  }
+  
+  .card_companyresume h4 {
+    color: var(--primary-color);
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .owner_details_container_companyresume h3 {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: var(--menu-link);
+  }
+
+  .owner_details_container_companyresume span {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--light-gray);
+  }
+
+  .owner_details_container_companyresume p {
+    font-size: 15px;
+    color: var(--para-color);
+    font-weight: 400;
+    letter-spacing: 0.2px;
+  }
+
+  .line_companyresume {
+    width: 80%;
+    height: 1px;
+    background-color: var(--input-border);
+  }
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 1100px) {
+    .main_container_companyresume {
+      padding: 35px 25px 30px 25px;
+      grid-gap: 22px;
+    }
+  
+    .profile_user_details_companyresume {
+      padding: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 840px) {
+    .info_middle_section_companyresume h5 {
+      font-size: 1rem;
+    }
+  
+    .profile_edit_companyresume {
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+    }
+    
+    .user_image_companyresume {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .main_container_companyresume {
+      padding: 30px 20px;
+    }
+  
+    .info_container_companyresume {
+      grid-gap: 10px;
+    }
+  
+    .profile_edit_container_companyresume {
+      grid-gap: 5px;
+    }
+  
+    .profile_edit_companyresume {
+      width: 27px;
+      height: 27px;
+      font-size: 16px;
+    }
+
+    .info_left_section_companyresume h5 {
+      font-size: 1.063rem;
+    }
+  
+    .info_left_section_companyresume p {
+      font-size: 0.875rem;
+    }
+  
+    .info_middle_section_companyresume h5 {
+      font-size: 0.95rem;
+    }
+
+    .card_companyresume {
+        padding: 0.7rem;
+        grid-gap: 10px;
+      }
+
+      .owner_details_container_companyresume p {
+        font-size: 0.9rem;
+      }
+
+      .line_companyresume {
+        width: 90%;
+      }
+  }
+  
+  @media screen and (max-width: 580px) {
+    .main_container_companyresume {
+      padding: 30px 18px;
+    }
+
+    .profile_background_companyresume img {
+        min-height: 15.625rem;
+      }
+  
+    .profile_user_details_companyresume {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      grid-gap: 5px;
+    }
+  
+    .profile_info_companyresume {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0;
+    }
+  
+    .info_container_companyresume {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .info_left_section_companyresume,
+    .info_middle_section_companyresume {
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .info_left_section_companyresume h5 {
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  
+    .profile_background_companyresume {
+      position: relative;
+    }
+  
+    .profile_edit_companyresume {
+      display: none;
+    }
+  
+    .profile_edit2_companyresume {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+      width: 25px;
+      height: 25px;
+      background-color: rgba(228, 217, 252, 0.45);
+      color: var(--primary-dark);
+      cursor: pointer;
+      margin: 6px 6px 0 0;
+    }
+
+    .user_image_companyresume {
+      margin-right: 0;
+      width: 5.2rem;
+      height: 5rem;
+      margin-top: -4rem;
+    }
+
+    .main_details_container_companyresume {
+        flex-direction: column;
+        grid-gap: 20px;
+      }
+
+      .main_details_left_section_companyresume {
+        width: 100%;
+        grid-gap: 20px;
+        padding: 0;
+      }
+    
+      .main_details_right_section_companyresume {
+        width: 100%;
+        grid-gap: 20px;
+        padding: 0;
+      }
+
+      .card_companyresume {
+        padding: 1rem;
+        grid-gap: 1rem;
+      }
+
+      .line_companyresume {
+        width: 65%;
+      }
+
+      .page_loading_container_companyresume img {
+        width: 100px;
+      }
+  }
+
+  @media screen and (max-width: 460px) {
+    .main_container_companyresume {
+      padding: 22px 10px 30px 10px;
+    }
+  
+    .welcome_container_companyresume {
+      padding: 0.9rem 0.8rem;
+    }
+  
+    .welcome_right_section_companyresume h4,
+    .welcome_left_section_companyresume h4 {
+      font-size: 1.17rem;
+    }
+  
+    .profile_user_details_companyresume {
+      padding: 0.5rem 0;
+    }
+
+    .card_companyresume {
+        padding: 0.8rem;
+        grid-gap: 0.7rem;
+      }
+
+      .line_companyresume {
+        width: 80%;
+      }
+  }
+  
+  @media screen and (max-width: 395px) {
+    .welcome_right_section_companyresume h4,
+    .welcome_left_section_companyresume h4 {
+      font-size: 1rem;
+    }
+  
+    .welcome_left_section_companyresume p {
+      font-size: 12px;
+    }
+  }
+  
+  @media screen and (max-width: 355px) {
+    .welcome_container_companyresume {
+      flex-direction: column;
+    }
+  
+    .welcome_left_section_companyresume {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .profile_container_companyresume {
+      padding: 0.5rem;
+    }
+  
+    .info_left_section_companyresume,
+    .info_middle_section_companyresume {
+      grid-gap: 0;
+    }
+
+    .card_companyresume {
+        grid-gap: 0.5rem;
+        padding: 0.7rem;
+      }
+
+      .line_companyresume {
+        width: 100%;
+      }
+  }
+  

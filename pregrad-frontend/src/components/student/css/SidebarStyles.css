@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.main_container_sidebar {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background-secondary);
+}
+
+.sidebar_container_sidebar {
+    background-color: var(--header-bg);
+    color: var(--primary-color);
+    height: 100vh;
+    overflow-y: hidden;
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; */
+    top: 0;
+    z-index: 800;
+}
+
+.top_section_sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.hamburger_menu_sidebar {
+    cursor: pointer;
+}
+
+.mid_section_sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    grid-gap: 0px;
+    margin-bottom: 10px;
+}
+
+.user_image_container_sidebar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: var(--primary-lightest);
+    border-radius: 7px;
+}
+
+.mid_section_sidebar h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--black-color);
+}
+
+.mid_section_sidebar span {
+    font-weight: 500;
+}
+
+.mid_section_sidebar h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--para-color);
+    font-weight: 400;
+}
+
+.user_image_container_sidebar img {
+    width: 80px;
+}
+
+.score_section_sidebar {
+    background-color: var(--background-secondary-hover);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    margin: 10px;
+    border-radius: 3px;
+}
+
+.score_section2_sidebar {
+    width: 100%;
+    margin-top: -5px;
+    padding: 0 10px 15px 40px;
+    display: flex;
+    align-items: center;
+}
+
+.score_section2_sidebar h6 {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    cursor: auto;
+    margin-left: -20px;
+    color: var(--warning-color);
+}
+
+.left_score_section_sidebar {
+    padding: 13px 6px;
+    background-color: var(--background-secondary);
+    border-radius: 50%;
+    border: 3px solid var(--header-bg); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.left_score_section_sidebar p {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.right_score_section_sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right_score_section_sidebar h3 {
+    font-size: 1rem;
+}
+
+.right_score_section_sidebar p {
+    font-size: 13px;
+    color: var(--para-color);
+    /* text-align: center; */
+}
+
+.btn_light_sidebar {
+    min-width: 90px;
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 9px 14px;
+    border-radius: 0.375rem;
+    font-size: 1.02rem;
+    font-weight: 600;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+  }
+  
+  .btn_light_sidebar:hover {
+    background-color: var(--primary-lightest);
+  }
+
+.routes_link_sidebar {
+    display: flex;
+    align-items:center;
+    /* color: #3f4358; */
+    color: var(--menu-link);
+    gap: 15px;
+}
+
+.routes_link_sidebar:hover {
+    border-right: 5px solid var(--primary-color);
+    transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    background-color: var(--primary-lightest);
+    color: var(--primary-color);
+}
+
+.active_sidebar {
+    border-right: 5px solid var(--primary-color);
+    background-color: var(--primary-lightest);
+    color: var(--primary-color);
+}
+
+.routes_link_sidebar:hover .side_menu_text_sidebar {
+    transform: translateX(15px);
+    transition: all 0.3s ease-in-out;
+}
+
+.routes_container_sidebar a {
+    vertical-align: middle;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.side_menu_icon_sidebar {
+    display: flex;
+    align-items: center;
+}
+
+.side_menu_text_sidebar {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.03rem;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.children_container_sidebar {
+    width: 100%;
+    background-color: var(--background-secondary);
+}

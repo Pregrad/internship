@@ -1,0 +1,197 @@
+.header_headerauth {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9% 9% 0.7% 9%;
+    position: sticky;
+    top: 0;
+    /* left: 0; */
+    z-index: 500;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    margin: 0;
+    background-color: var(--header-bg);
+  }
+  
+  .left_section_headerauth {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right_section_headerauth {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .left_section_headerauth .intern_headerauth {
+    margin-left: 2.188rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--black-color);
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+  }
+  
+  .left_section_headerauth .intern_headerauth::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--black-color);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .left_section_headerauth .intern_headerauth:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  
+  .right_section_headerauth a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1rem;
+    position: relative;
+  }
+  
+  .right_section_headerauth a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .right_section_headerauth a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  
+  img {
+    width: 100px;
+  }
+  
+  .theme_icon_container_headerauth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7.5px 8px 7.5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+    /* border: 1px solid var(--background-secondary-hover); */
+  }
+  
+  .theme_icon_container_headerauth:hover {
+    background-color: var(--background-secondary-hover);
+  }
+  
+  .theme_icon_headerauth {
+    font-size: 23px;
+    color: var(--primary-color);
+  }
+  
+  .intern2_headerauth,
+  .hamburger_headerauth {
+    display: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    .header_headerauth {
+      padding: 2% 9%;
+    }
+  
+    .intern_headerauth {
+      display: none;
+    }
+  
+    .theme_icon_container_headerauth {
+      display: none;
+    }
+  
+    .theme_icon_container2_headerauth {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 7px 6px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.2s all ease-in-out;
+    }
+    
+    .theme_icon_container2_headerauth:hover {
+      background-color: var(--background-secondary-hover);
+    }
+  
+    .theme_icon2_headerauth {
+      font-size: 20px;
+      color: var(--primary-color);
+    }
+  
+    .intern2_headerauth,
+    .hamburger_headerauth {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-gap: 15px;
+    }
+  
+    .hamburger_icon_headerauth {
+      color: var(--black-color);
+    }
+  
+    .right_section_headerauth {
+      position: fixed;
+      top: 71px;
+      left: 0;
+      width: 100vw !important;
+      z-index: 90;
+      background-color: var(--white-color);
+      padding: 20px 9%;
+      display: none;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column-reverse;
+      transition: 0.3s all ease;
+    }
+  
+    .right_section_headerauth.active_headerauth {
+      display: flex;
+      box-shadow: 0 0 0 0 rgb(0 0 0 / 0);
+    }
+  
+    .right_section_headerauth a {
+      font-size: 1.1rem;
+    }
+  
+    .button_container_headerauth {
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 10px;
+    }
+  
+    .btn_light_headerauth,
+    .btn_primary_headerauth {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
+  
+    .right_section_headerauth a {
+      margin-bottom: 15px;
+    }
+  }
