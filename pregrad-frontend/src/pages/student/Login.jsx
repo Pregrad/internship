@@ -16,8 +16,7 @@ const Login = ({theme, setTheme}) => {
 
   const navigate = useNavigate();
 
-  const [cookies,setCookie,removeCookie] = useCookies([])
-// const type = "forgotpassword" 
+  // const [cookies,setCookie,removeCookie] = useCookies([]) ; 
 
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -97,16 +96,16 @@ const Login = ({theme, setTheme}) => {
     return errors;
   }
 
-  const googleAuth = async()=>{
-    if(cookies.jwt)
-    {
-      const {data} = await axios.post(`http://localhost:8000/student`,{},{withCredentials:true})
-      navigate(`/student/${data.id}`)
-    }
-    else{
-     window.open("http://localhost:8000/auth/google","_self")
-   }
-}
+//   const googleAuth = async()=>{
+//     if(cookies.jwt)
+//     {
+//       const {data} = await axios.post(`http://localhost:8000/student`,{},{withCredentials:true})
+//       navigate(`/student/${data.id}`)
+//     }
+//     else{
+//      window.open("http://localhost:8000/auth/google","_self")
+//    }
+// }
 
   return (
     <div>

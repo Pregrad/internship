@@ -83,7 +83,6 @@ try{
 }
 }
 
-
 module.exports.updateAchievement = async(req,res)=>{
    try{
     const {u_id,id} = req.params
@@ -256,6 +255,7 @@ module.exports.updateProject = async(req,res)=>{
 
 // Education function
 
+// will create a new or add education block
 module.exports.studentEducation = async(req,res)=>{
 
 const {id} = req.params;
@@ -265,7 +265,7 @@ const {university,field,start,end,degree} = req.body;
 const student =await StudentInfo.findOne({id})
 
 if(student){
-
+    // will push values in the created education array .
     const updateEducation = await StudentInfo.updateOne({
         id,
         'education.degree':{
@@ -284,7 +284,7 @@ if(student){
     }]
     }})
 
-    if(updateEducation.modifiedCount != 1)
+    if(updateEducation.modifiedCount != 1)  // if user added a duplicate info.
     {
         res.send({
             message:"You cannot add duplicate information"
@@ -293,6 +293,7 @@ if(student){
     }
 
 }else{
+    // create the education array.
     const newStudentInfo = await StudentInfo.create({
         id,
         education:[{
@@ -311,7 +312,7 @@ res.send({message:"true"})
  
 }
 
-
+// will send the data of all the education block as response. 
 module.exports.getEducationInfo = async(req,res)=>{
     
     const {id} = req.params;
@@ -327,6 +328,7 @@ module.exports.getEducationInfo = async(req,res)=>{
     }
 }
 
+// will delete the particular education block . 
 module.exports.deleteEducation = async(req,res)=>{
     try{
         const {u_id,id} = req.params
@@ -345,6 +347,7 @@ module.exports.deleteEducation = async(req,res)=>{
     }
 }
 
+// will set the updated values .
 module.exports.updatedEducation = async(req,res)=>{
 
     try{
@@ -360,8 +363,6 @@ module.exports.updatedEducation = async(req,res)=>{
 
     await user.save()
 
-    console.log(user.education);
-    
     res.send({education:user.education})
 
 }catch(err){
@@ -372,7 +373,7 @@ module.exports.updatedEducation = async(req,res)=>{
 
 }
 
-
+// send the previous stored values as response .
 module.exports.updateEducation = async(req,res)=>{
     try{
         const {u_id,id} = req.params
@@ -388,7 +389,7 @@ module.exports.updateEducation = async(req,res)=>{
     }
 }
 
-// workexperiene function
+// WorkExperience function
 
 module.exports.studentWorkExperience = async(req,res)=>{
 

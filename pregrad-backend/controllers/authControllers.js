@@ -25,6 +25,8 @@ oAuth2Client.setCredentials({refresh_token:process.env.REFRESH_TOKEN})
 const sendOtpToVerify = async({email})=>{
  
   try{
+    // transporter basicaaly create a gmail service where you could send the mail on gmail accounts.This requires Client Id and Client Secret 
+    //  which can be generated on google developers page. 
 
     const transporter = nodemailer.createTransport({
       service:"gmail",
@@ -37,9 +39,9 @@ const sendOtpToVerify = async({email})=>{
       }
     })         
     
-
     const otp = await generateOtp({ email });
 
+    // mailOptions contain all the necessary information required to send the email.
     const mailOptions={
       from:`Pregrad <${process.env.GMAIL}>`,
       to:email,
@@ -56,6 +58,8 @@ const sendOtpToVerify = async({email})=>{
 
 }
 
+ // generate otp function will generate the otp and send the email . 
+
 const generateOtp = async ({ email }) => {
   try {
 
@@ -71,10 +75,10 @@ const generateOtp = async ({ email }) => {
   }
 }
 
-
+// This is to register the user .
 module.exports.signup = async (req, res) => {
-
-  const { name, email, password, mobile } = req.body;
+  try{
+    const { name, email, password, mobile } = req.body;
 
   const company = await Company.findOne({email})
 
@@ -103,6 +107,10 @@ module.exports.signup = async (req, res) => {
     });
   }
 
+  }catch(err){
+    console.log(err) ;
+  }
+  
 };
 
 module.exports.verifyEmail=async(req,res)=>{
@@ -110,7 +118,7 @@ try{
 
   const {email} = req.body
 
-  const user = await UserRegister.findOne({email})
+ const user = await UserRegister.findOne({email})
  const company = await Company.findOne({email})
  const admin = await Admin.findOne({email});
 
@@ -187,23 +195,24 @@ try{
 }
 }
 
+// This will check the otp in the otp table whether an otp is sent to the repective user .
 module.exports.verifyOtp = async(req,res)=>{
 try{
   const {email,otp1,otp2,otp3,otp4} = req.body; 
 
   const otp = `${otp1}`+`${otp2}`+`${otp3}`+`${otp4}`;
 
-  const user = await Otp.findOne({email});
+  const user = await Otp.findOne({email});  // finding the otp in the table.
 
   if(user){
-    if(user.expiredAt.getTime() < Date.now())
+    if(user.expiredAt.getTime() < Date.now()) // checking the otp is expired or not .
     {
       res.send({message:"Code Expired"});
       await Otp.deleteOne({email});
 
     }else{
 
-      const validOtp = await bcrypt.compare(otp,user.otp);
+      const validOtp = await bcrypt.compare(otp,user.otp); // compare the otp with user entered otp.
 
       if(!validOtp){
         res.send({message:"Invalid Otp"})
@@ -218,7 +227,7 @@ try{
 
         if(student){
 
-        await UserRegister.updateOne({email},{$set:{
+        await UserRegister.updateOne({email},{$set:{  // setting the user is verified after checking whether the otp entered is correct or not .
           verified:true
         }})
          await Otp.deleteOne({email});
@@ -247,12 +256,13 @@ try{
 
 }
 
+// Login will check the check user email and password in the table.
 module.exports.login = async (req, res) => {
   try{  
    
     const {email, password} = req.body;
  
-    const user = await UserRegister.login(email,password)
+    const user = await UserRegister.login(email,password);
 
     if(!user)
     {
@@ -308,6 +318,7 @@ else{
     
 }
 
+// This function will store user new password in the database. 
 module.exports.newPassword = async(req,res)=>{
   try{ 
 
@@ -349,6 +360,7 @@ module.exports.newPassword = async(req,res)=>{
 }
 }
 
+// This will provide all the user details .
 module.exports.getUserDetails = async(req,res)=>{
 
   try{

@@ -12,9 +12,11 @@ import HeaderAuth from "../../components/student/jsx/HeaderAuth";
 const EmailVerify = ({theme, setTheme}) => {
   const navigate = useNavigate();
 
-const {type} = useParams()
+const {type} = useParams() ; // useParams is used to extract the `type` from the url link.
+// type can be of two types : register and forgotpassword
 
-  const toggleTheme = () => {
+
+const toggleTheme = () => {
     if(theme === "light-theme"){
       setTheme("dark-theme");
     }else{
@@ -22,7 +24,7 @@ const {type} = useParams()
     }
   }
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); // set loader to true or false. 
 
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);

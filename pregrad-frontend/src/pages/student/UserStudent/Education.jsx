@@ -17,10 +17,10 @@ const Education = () => {
 
   const [cookies,setCookie,removeCookie] = useCookies([])
 
-  const [isPageLoading, setIsPageLoading] = useState(false);
+  const [isPageLoading, setIsPageLoading] = useState(false); // loader
 
-  const [isContent, setIsContent] = useState(false);
-  const [isModal, setIsModal] = useState(false);
+  const [isContent, setIsContent] = useState(false); // when there is no education block it is set to false otherwise set to true.
+  const [isModal, setIsModal] = useState(false);  // open and close the model
 
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -39,6 +39,7 @@ const Education = () => {
 
   const [studentedu,setStudentedu] = useState([])
 
+  // updateForm will set the updated value of the input fields.
   const updateForm = (e)=>{
     const {name, value} = e.target;
     setEditEducation({
@@ -62,6 +63,7 @@ const Education = () => {
     setIsSubmit(true);
   }
 
+// getEducation will get all the education blocks.
   const getEducation = async()=>{
     
         const {data} = await axios.get(`http://localhost:8000/student/geteducation/${id}`)
@@ -160,7 +162,8 @@ const Education = () => {
 
     return errors;
   }
-
+// u_id - user id and e_id - particular education block id 
+// delete an education block of a user.
 const deleteEducation = async(u_id,e_id)=>{
 
   const {data} = await axios.delete(`http://localhost:8000/student/deleteeducation/${u_id}/${e_id}`)
@@ -172,6 +175,8 @@ const deleteEducation = async(u_id,e_id)=>{
  
 
 }
+
+// update an education block of an user.
 
 const UpdatedEducation = async(e,u_id)=>{
   e.preventDefault();
@@ -189,6 +194,7 @@ const UpdatedEducation = async(e,u_id)=>{
   }
 }
 
+// editEducation function will get the previous stored values and fill it in the input fields.
 const editEducation = async(u_id,e_id)=>{
   setIsModal(!isModal) 
   seteditform("edit")

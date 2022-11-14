@@ -10,16 +10,15 @@ import PageLoader from "../../../img/page-loader.gif";
 
 const Achievements = () => {
   
-  const navigate = useNavigate()
+  const navigate = useNavigate() ;
 
-  const {id} = useParams()
+  const {id} = useParams() ;
 
-
-  const [cookies,setCookie,removeCookie] = useCookies([])
+  const [cookies,setCookie,removeCookie] = useCookies([]) ;
 
   const [isPageLoading, setIsPageLoading] = useState(false);
   
-  const [editform,seteditform] = useState("")
+  const [editform,seteditform] = useState("") ; 
   
   const [isContent, setIsContent] = useState(false);
   const [isModal, setIsModal] = useState(false);
@@ -27,15 +26,14 @@ const Achievements = () => {
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
-const [editachievement,setEditAchievement] = useState({})
-
+  const [editachievement,setEditAchievement] = useState({}); 
 
   const [achievements, setAchievements] = useState({
     title: "",
     certificate: "",
   });
 
-const [studentachi,setStudentachi] = useState([])
+  const [studentachi,setStudentachi] = useState([]);
 
   const handleForm = (e) => {
     const {name, value} = e.target;
@@ -59,6 +57,7 @@ const [studentachi,setStudentachi] = useState([])
     setIsSubmit(true);
   }
 
+  // get all the achievements blocks
   const getAchievements = ()=>{
     axios.get(`http://localhost:8000/student/getachievements/${id}`).then((res)=>{
       if(res.data.message === "true"){
@@ -128,7 +127,8 @@ const [studentachi,setStudentachi] = useState([])
 
     return errors;
   }
-
+// u_id - user id and a_id - particular achievement block id
+// delete an achievement block of a user. 
  const deleteAchievement = async(u_id,a_id)=>{
   
  const {data} = await axios.delete(`http://localhost:8000/student/deleteachievement/${u_id}/${a_id}`)
@@ -139,7 +139,7 @@ const [studentachi,setStudentachi] = useState([])
  }
 
  }
-
+// editAchievement function will get the previous stored values and fill it in the input fields.
 const editAchievement = async(u_id,a_id)=>{
   setIsModal(!isModal) 
   seteditform("edit")
@@ -149,10 +149,10 @@ const editAchievement = async(u_id,a_id)=>{
 
   const setStateValue = ()=>{
     setIsModal(!isModal)
-    seteditform("addnew")
+    seteditform("addnew");
   }
 
-
+// update an achievement block of an user.
   const UpdatedAchievement = async(e,u_id)=>{
     e.preventDefault();
    

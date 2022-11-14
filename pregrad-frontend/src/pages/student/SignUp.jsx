@@ -14,15 +14,14 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 const SignUp = ({theme, setTheme}) => {
   const navigate = useNavigate();
 
-  const [showPassword, setShowPassword] = useState(true);
-
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
-  const [checkboxCheck, setCheckboxCheck] = useState(false);
+  const [showPassword, setShowPassword] = useState(true);  // to toggle between show and hide  password
+  const [formErrors, setFormErrors] = useState({}); // An object to store all the errors corresponding to each input .  
+  const [isSubmit, setIsSubmit] = useState(false);  // A flag which is used to maintain whether the submit btn is clicked or not .
+  const [checkboxCheck, setCheckboxCheck] = useState(false); // to check or uncheck the terms and condition input .
 
   const type = "register"
 
-  const [user, setUser] = useState({
+  const [user, setUser] = useState({  // it stores all the data which is filled in the form by user .
     name: "",
     email: "",
     password: "",
@@ -30,6 +29,7 @@ const SignUp = ({theme, setTheme}) => {
     mobile: "",
   });
 
+  // handleForm function is used to extract data from the input field and fill it in the corresponding enteries in "user" state .
   const handleForm = (e) => {
     const {name, value} = e.target;
     setUser({
@@ -38,6 +38,7 @@ const SignUp = ({theme, setTheme}) => {
     })
   }
 
+  // submit Form function will set the errors and set isSubmit to true.
   const submitForm = (e) => {
     e.preventDefault();
     setFormErrors(validate(user));
@@ -45,6 +46,7 @@ const SignUp = ({theme, setTheme}) => {
   }
 
   useEffect(() => {
+    // if there is no error and isSubmit is also true the we will send the request to the backend.
     if( Object.keys(formErrors).length === 0 && isSubmit ){
       axios.post("http://localhost:8000/signup", user)
       .then( res => {
@@ -60,8 +62,10 @@ const SignUp = ({theme, setTheme}) => {
     }
   }, [formErrors]);
 
+  // validate function will validate all the data in the input field and show the error (if any) to their respective fields.  
   const validate = (values) => {
-    const errors = {};
+    const errors = {}; // error object
+    // regex check the valid email syntax . 
     const regex =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if(!values.name){

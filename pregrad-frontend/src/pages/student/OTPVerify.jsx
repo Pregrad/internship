@@ -13,7 +13,7 @@ const OTPVerify = ({theme, setTheme}) => {
 
   const navigate = useNavigate();
 
-const {email,type} = useParams()
+const {email,type} = useParams() ;
 
   const toggleTheme = () => {
     if(theme === "light-theme"){
@@ -36,11 +36,6 @@ const {email,type} = useParams()
     otp3: "",
     otp4: ""
   });
-
-
-// const [sendDetails,setSendDetails] = useState({})
-
-
 
   const handleForm = (e) => {
     const {name, value} = e.target;

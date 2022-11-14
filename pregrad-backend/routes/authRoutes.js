@@ -41,7 +41,7 @@ router.route(VERIFYOTP).post(Handler.otpVerify,verifyOtp);
 
 router.route(STUDENT).post(CheckUser);
 
-router.route(COMPANY).post(CheckCompany);
+router.route(COMPANY).post(CheckCompany); 
 
 router.route(NEWPASSWORD).post(Handler.forgotPassword,newPassword);
 

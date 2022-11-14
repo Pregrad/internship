@@ -12,19 +12,17 @@ import { FiFileText } from 'react-icons/fi';
 const Internships = () => {
 
 
-  const navigate = useNavigate()
+  const navigate = useNavigate() ;
 
-   const {id} = useParams()
+   const {id} = useParams();
 
-   const [companyid,setCompanyId] = useState()
+   const [internships,setInternships] = useState([]) ; // Set the state with all the internhips store in database . 
 
-   const [internships,setInternships] = useState([])
-
-   const [appliedinternship,setappliedInternship] = useState([])
+   const [appliedinternship,setappliedInternship] = useState([]) ;  // will contains all the applied internship by a student .
 
   const [cookies,setCookie,removeCookie] = useCookies([]);
 
-  const [currentPage, setCurrentPage] = useState("new-internships");
+  const [currentPage, setCurrentPage] = useState("new-internships"); // toggle between new internships and applied internships .
 
   const [isPageLoading, setIsPageLoading] = useState(false);
 
@@ -32,7 +30,7 @@ const Internships = () => {
 
   const [isAppliedInternshipContent, setIsAppliedInternshipContent] = useState(true);
 
-
+// getAllInterships function will get all the internhips from the backend.
 const getAllInterships = ()=>{
   axios.get(`http://localhost:8000/company/allinternships/${id}`).then(({data})=>{
     console.log(data)
@@ -42,10 +40,9 @@ const getAllInterships = ()=>{
     },800)
   })
 }
-
+// getAppliedInternship function will get all the applied internhips from the backend.
 const getAppliedInternship = ()=>{
    axios.get(`http://localhost:8000/student/getappliedinternship/${id}`).then(({data})=>{
-    console.log(data);
     setappliedInternship(data)
     setTimeout(() => {
       setIsPageLoading(false)

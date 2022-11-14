@@ -11,19 +11,18 @@ const DetailsOne = ({theme, setTheme}) => {
 
   const navigate = useNavigate()
 
-  const {id} = useParams()
+  const {id} = useParams(); // unique id for unique user.
 
- const [cookies,setCookie,removeCookie] = useCookies([])
+ const [cookies,setCookie,removeCookie] = useCookies([]); // this will verify the user whether the cookie `jwt` is present or expired.
 
- const  [user,setUser] = useState({})
+ const  [user,setUser] = useState({});
 
- const [video,setVideo] = useState("")
+ const [video,setVideo] = useState("");
 
-  var currentYear = new Date().getFullYear();
-
-
+  var currentYear = new Date().getFullYear(); // 
 
   const yearData = [];
+  // calculating 3 previous years 1 current year and 6 coming years for dropdown menu.
   for(let i=0; i<10; i++){
     if(i<7){
       yearData[i] = currentYear+i;
@@ -41,7 +40,7 @@ const DetailsOne = ({theme, setTheme}) => {
 
 
 
-  // College
+  // College 
   const [selectedCollege, setSelectedCollege] = useState("");
  
   const handleCollege = (event) => {
@@ -143,7 +142,7 @@ const DetailsOne = ({theme, setTheme}) => {
     setFormErrors(validate(socialLink));
     setIsSubmit(true);
   }
-
+ // getting student name using the 
   const getUserDetails= async()=>{
 
     axios.get(`http://localhost:8000/userDetails/${id}`).then(({data})=>{
@@ -171,7 +170,9 @@ const DetailsOne = ({theme, setTheme}) => {
         }
       }
     }
-    verifyUser()
+    verifyUser();   // function will check first check whether the cookie is present or not. If it is not then we nvigate the user to login page.
+                    // if cookie is present then it will check the decoded id from cookie and the id present in the url .If they didn't match
+                    // then it again sent it to Login page otherwise the user will navigate to the detailsOne page. 
     
     if( Object.keys(formErrors).length === 0 && isSubmit ){
      axios.post(`http://localhost:8000/student/detailsone/${id}`,{
